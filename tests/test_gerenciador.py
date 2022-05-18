@@ -23,14 +23,6 @@ def test_quando_listar_tarefas_retorno_deve_ser_uma_lista():
 
 
 def test_quando_listar_tarefas_a_tarefa_retornada_deve_possuir_id():
-    TAREFAS.append({"id": 1})
-    cliente = TestClient(app)
-    resposta = cliente.get("/tarefas")
-    assert "id" in resposta.json().pop()
-    TAREFAS.clear()
-
-
-def test_quando_listar_tarefas_a_tarefa_retornada_deve_possuir_id():
     TAREFAS.append(
         {
             "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
